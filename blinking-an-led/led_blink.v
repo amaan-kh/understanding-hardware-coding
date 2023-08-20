@@ -7,7 +7,7 @@ reg [31:0] counter = 0;  // Counter to divide the clock frequency
 reg toggle = 1;          // Signal to toggle the LED
 
 always @(posedge clk) begin
-    if (counter == 2) begin  // Approximately 1 Hz blink rate
+    if (counter == 2) begin  // Approximately 1 Hz blink rate is 25000000  but wasn't visible so using just 2
         counter <= 0;
         toggle <= ~toggle;
     end else begin
